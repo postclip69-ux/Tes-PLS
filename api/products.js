@@ -52,18 +52,14 @@ export default async function handler(req, res) {
 
         const filtered = json.data.filter(item => {
 
-            return (
+    const kode = item.kode_produk;
 
-                item.kode_produk.startsWith("XLA")
+    return (
+        /^XLA\d+$/.test(kode) ||
+        /^XDA\d+$/.test(kode)
+    );
 
-                ||
-
-                item.kode_produk.startsWith("XDA")
-
-            );
-
-        });
-
+});
         // =====================
         // OUTPUT SAMA PERSIS
         // =====================
