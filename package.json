@@ -1,5 +1,8 @@
 {
-    "name": "stokakrab-api",
-    "version": "1.0.0",
-    "private": true
+  "name": "stokakrab-api",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  }
 }
