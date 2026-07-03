@@ -60,18 +60,18 @@ export default async function handler(req, res) {
             .filter(item => {
 
                 const kode = item.kode_produk;
-
-                return (
-                    /^XLA\\d+$/.test(kode) ||
-                    /^XDA\\d+$/.test(kode)
-                );
+                
+                );return (
+    /^XLA\d+$/.test(kode) ||
+    /^XDA\d+$/.test(kode)
+);
 
             })
 
             .map(item => {
 
                 // XLA sudah punya API stok
-                if (/^XLA\\d+$/.test(item.kode_produk)) {
+               if (/^XLA\d+$/.test(item.kode_produk)) {
 
                     return {
                         ...item,
