@@ -108,20 +108,14 @@ export default async function handler(req, res) {
 
     } catch (err) {
 
-        return res.status(500).json({
+    console.error(err);
 
-            ok: false,
+    return res.status(500).json({
+        ok: false,
+        error: err.toString(),
+        stack: err.stack
+    });
 
-            provider: null,
-
-            count: 0,
-
-            data: [],
-
-            message: err.message
-
-        });
-
-    }
+}
 
 }
