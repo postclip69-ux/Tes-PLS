@@ -59,12 +59,14 @@ export default async function handler(req, res) {
 
             .filter(item => {
 
-                const kode = item.kode_produk;
-                
-                );return (
-    /^XLA\d+$/.test(kode) ||
-    /^XDA\d+$/.test(kode)
-);
+    const kode = item.kode_produk;
+
+    return (
+        /^XLA\d+$/.test(kode) ||
+        /^XDA\d+$/.test(kode)
+    );
+
+})
 
             })
 
